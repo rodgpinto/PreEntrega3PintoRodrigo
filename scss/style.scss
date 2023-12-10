@@ -1,0 +1,322 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Pixelify Sans", sans-serif;
+}
+//importamos el mixin
+@import "partials/flex";
+
+$color-letra: aliceblue;
+body {
+  background-color: #212529;
+  header {
+    div {
+      font-size: 20px;
+    }
+  }
+  //Damos estilos al index
+  main {
+    .titulo {
+      h1 {
+        margin-top: 20px;
+        text-align: center;
+        color: $color-letra;
+      }
+      p {
+        font-size: 15px;
+        text-align: center;
+        color: $color-letra;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .imgLogo {
+        display: flex;
+        justify-content: center;
+        //aplicamos un hover a la imagen del logo
+        img {
+          text-align: center;
+          transition: transform 0.8s ease-in-out;
+          &:hover {
+            transform: rotate(360deg);
+          }
+        }
+      }
+
+      h2 {
+        margin-top: 15px;
+        text-align: center;
+        color: $color-letra;
+      }
+    } //mejoramos el contenido del carousel
+    div {
+      .carousel-item {
+        h5 {
+          color: $color-letra;
+          font-size: 45px;
+          font-weight: 800;
+          text-shadow: 2px 2px 3px rgb(0, 0, 0);
+        }
+        p {
+          color: $color-letra;
+          font-size: 25px;
+          font-weight: 800;
+          text-shadow: 2px 2px 2px rgb(0, 0, 0);
+        }
+      }
+    } //implementamos un input de contacto
+    div {
+      h2 {
+        font-size: 15px;
+        margin: 10px;
+        color: $color-letra;
+        text-align: center;
+      }
+      p {
+        font-size: 10px;
+        color: $color-letra;
+        text-align: center;
+      }
+    }
+    .formIndex {
+      display: flex;
+      justify-content: center;
+      div {
+        text-align: center;
+        color: grey;
+      }
+    }
+  }
+  //comenzamos a dar estilos a nosotros
+  .nosotros {
+    display: flex;
+    flex-wrap: wrap;
+    color: $color-letra;
+    div {
+      .tituloNosotros {
+        text-align: center;
+      }
+      .imgLogo {
+        display: flex;
+        justify-content: center;
+        img {
+          text-align: justify;
+          transition: transform 0.8s ease-in-out;
+          &:hover {
+            transform: rotate(360deg);
+          }
+        }
+      }
+      h2 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 15px;
+      }
+      div {
+        video {
+          position: relative;
+          overflow: hidden;
+          width: 100%;
+          max-height: 640px;
+        }
+      }
+      .mapa {
+        text-align: center;
+      }
+    }
+  }
+  //comenzamos a dar estilos al menu
+  .menu {
+    //implementamos un mixins
+    @include flex;
+    color: $color-letra;
+    div {
+      .tituloMenu {
+        text-align: center;
+      }
+      .imgLogo {
+        display: flex;
+        justify-content: center;
+        img {
+          text-align: justify;
+          transition: transform 0.8s ease-in-out;
+          &:hover {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+    div {
+      section {
+        text-align: center;
+        h2 {
+          font-size: 20px;
+        }
+        p {
+          font-size: 15px;
+        }
+      }
+    } //optimizamos las cards de bootstrap y le aplicamos un hover
+    .card {
+      max-width: 100%;
+      height: auto;
+      border: 0px;
+      background-color: #212529;
+      div {
+        transition: transform 0.3s ease-in-out;
+        &:hover {
+          transform: scale(1.1);
+        }
+        h5 {
+          font-size: 35px;
+          text-align: center;
+          color: $color-letra;
+        }
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .fotos {
+    .texto-fotos {
+      color: $color-letra;
+      text-align: center;
+    }
+    section {
+      .grid {
+        text-align: center;
+        margin: 5px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas:
+          "area1 area1 area2 area2"
+          "area1 area1 area2 area2"
+          "area3 area3 area4 area4"
+          "area3 area3 area4 area4";
+      } 
+      //aplicamos media query para el grid
+      @media (max-width: 768px) {
+        .grid {
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: repeat(8, auto);
+          grid-template-areas:
+            "area1"
+            "area1"
+            "area2"
+            "area2"
+            "area3"
+            "area3"
+            "area4"
+            "area4";
+        }
+        .gridImg {
+          border-radius: 60px;
+        }
+      }
+      //mejoramos las imagenes e implementamos un hover
+      .gridImg {
+        margin: 15px;
+        width: 100%;
+        height: auto;
+        border: 10px;
+        border-radius: 10px;
+        transition: box-shadow 0.3s ease-in-out;
+        transition: transform 0.4s ease-in-out;
+        &:hover {
+          transform: scale(1.03);
+          transition: transform 0.4s ease-in-out;
+        }
+      }
+
+      .area {
+        margin: 10px;
+      }
+
+      #area1 {
+        grid-area: area1;
+      }
+
+      #area2 {
+        grid-area: area2;
+      }
+
+      #area3 {
+        grid-area: area3;
+      }
+
+      #area4 {
+        grid-area: area4;
+      }
+      #area5 {
+        grid-area: area4;
+      }
+      #area6 {
+        grid-area: area4;
+      }
+    }
+  }
+//damos estilo al contacto e incluimos un mixin
+  .contacto {
+    @include flex;
+    color: $color-letra;
+    div {
+      .tituloMenu {
+        text-align: center;
+      }
+      .imgLogo {
+        display: flex;
+        justify-content: center;
+        img {
+          text-align: justify;
+          transition: transform 0.8s ease-in-out;
+          &:hover {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+    .tituloContacto {
+      text-align: center;
+      p {
+        font-size: 15px;
+      }
+    }
+    .button {
+      border-radius: 10px;
+    }
+  }
+
+  hr {
+    color: white;
+  }
+
+  //damos estilos al footer e incluimos un hover
+  footer {
+    nav {
+      div {
+        @include flex;
+        a {
+          margin-top: 20px;
+          margin-left: 10px;
+          margin-right: 10px;
+          color: $color-letra;
+          text-decoration: none;
+          text-align: justify;
+        }
+      }
+    }
+    div {
+      transition: transform 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+      @include flex;
+      margin-top: 3px;
+      margin-bottom: 15px;
+      color: $color-letra;
+    }
+  }
+}

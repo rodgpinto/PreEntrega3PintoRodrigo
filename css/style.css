@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+body {
+  background-color: #212529;
+}
+body header div {
+  font-size: 20px;
+}
+body main .titulo h1 {
+  margin-top: 20px;
+  text-align: center;
+  color: aliceblue;
+}
+body main .titulo p {
+  font-size: 15px;
+  text-align: center;
+  color: aliceblue;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+body main .titulo .imgLogo {
+  display: flex;
+  justify-content: center;
+}
+body main .titulo .imgLogo img {
+  text-align: center;
+  transition: transform 0.8s ease-in-out;
+}
+body main .titulo .imgLogo img:hover {
+  transform: rotate(360deg);
+}
+body main .titulo h2 {
+  margin-top: 15px;
+  text-align: center;
+  color: aliceblue;
+}
+body main div .carousel-item h5 {
+  color: aliceblue;
+  font-size: 45px;
+  font-weight: 800;
+  text-shadow: 2px 2px 3px rgb(0, 0, 0);
+}
+body main div .carousel-item p {
+  color: aliceblue;
+  font-size: 25px;
+  font-weight: 800;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+body main div h2 {
+  font-size: 15px;
+  margin: 10px;
+  color: aliceblue;
+  text-align: center;
+}
+body main div p {
+  font-size: 10px;
+  color: aliceblue;
+  text-align: center;
+}
+body main .formIndex {
+  display: flex;
+  justify-content: center;
+}
+body main .formIndex div {
+  text-align: center;
+  color: grey;
+}
+body .nosotros {
+  display: flex;
+  flex-wrap: wrap;
+  color: aliceblue;
+}
+body .nosotros div .tituloNosotros {
+  text-align: center;
+}
+body .nosotros div .imgLogo {
+  display: flex;
+  justify-content: center;
+}
+body .nosotros div .imgLogo img {
+  text-align: justify;
+  transition: transform 0.8s ease-in-out;
+}
+body .nosotros div .imgLogo img:hover {
+  transform: rotate(360deg);
+}
+body .nosotros div h2 {
+  font-size: 20px;
+}
+body .nosotros div p {
+  font-size: 15px;
+}
+body .nosotros div div video {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-height: 640px;
+}
+body .nosotros div .mapa {
+  text-align: center;
+}
+body .menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: aliceblue;
+}
+body .menu div .tituloMenu {
+  text-align: center;
+}
+body .menu div .imgLogo {
+  display: flex;
+  justify-content: center;
+}
+body .menu div .imgLogo img {
+  text-align: justify;
+  transition: transform 0.8s ease-in-out;
+}
+body .menu div .imgLogo img:hover {
+  transform: rotate(360deg);
+}
+body .menu div section {
+  text-align: center;
+}
+body .menu div section h2 {
+  font-size: 20px;
+}
+body .menu div section p {
+  font-size: 15px;
+}
+body .menu .card {
+  max-width: 100%;
+  height: auto;
+  border: 0px;
+  background-color: #212529;
+}
+body .menu .card div {
+  transition: transform 0.3s ease-in-out;
+}
+body .menu .card div:hover {
+  transform: scale(1.1);
+}
+body .menu .card div h5 {
+  font-size: 35px;
+  text-align: center;
+  color: aliceblue;
+}
+body .menu .card div p {
+  font-size: 20px;
+}
+body .fotos .texto-fotos {
+  color: aliceblue;
+  text-align: center;
+}
+body .fotos section .grid {
+  text-align: center;
+  margin: 5px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "area1 area1 area2 area2" "area1 area1 area2 area2" "area3 area3 area4 area4" "area3 area3 area4 area4";
+}
+@media (max-width: 768px) {
+  body .fotos section .grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, auto);
+    grid-template-areas: "area1" "area1" "area2" "area2" "area3" "area3" "area4" "area4";
+  }
+  body .fotos section .gridImg {
+    border-radius: 60px;
+  }
+}
+body .fotos section .gridImg {
+  margin: 15px;
+  width: 100%;
+  height: auto;
+  border: 10px;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+}
+body .fotos section .gridImg:hover {
+  transform: scale(1.03);
+  transition: transform 0.4s ease-in-out;
+}
+body .fotos section .area {
+  margin: 10px;
+}
+body .fotos section #area1 {
+  grid-area: area1;
+}
+body .fotos section #area2 {
+  grid-area: area2;
+}
+body .fotos section #area3 {
+  grid-area: area3;
+}
+body .fotos section #area4 {
+  grid-area: area4;
+}
+body .fotos section #area5 {
+  grid-area: area4;
+}
+body .fotos section #area6 {
+  grid-area: area4;
+}
+body .contacto {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: aliceblue;
+}
+body .contacto div .tituloMenu {
+  text-align: center;
+}
+body .contacto div .imgLogo {
+  display: flex;
+  justify-content: center;
+}
+body .contacto div .imgLogo img {
+  text-align: justify;
+  transition: transform 0.8s ease-in-out;
+}
+body .contacto div .imgLogo img:hover {
+  transform: rotate(360deg);
+}
+body .contacto .tituloContacto {
+  text-align: center;
+}
+body .contacto .tituloContacto p {
+  font-size: 15px;
+}
+body .contacto .button {
+  border-radius: 10px;
+}
+body hr {
+  color: white;
+}
+body footer nav div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+body footer nav div a {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: aliceblue;
+  text-decoration: none;
+  text-align: justify;
+}
+body footer div {
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 3px;
+  margin-bottom: 15px;
+  color: aliceblue;
+}
+body footer div:hover {
+  transform: scale(1.1);
+}
+
+/*# sourceMappingURL=style.css.map */
